@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega</title>
+    
+    <style>
+        @media (min-width: 900px) {
+
+        @font-face {
+            font-family: 'TexGyreAdventor';
+            src: url('texgyreadventor-bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'TexGyreAdventor', sans-serif;
+        }
+
+        body {
+            position: relative;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        header {
+            height: 72px;
+            background-color: #ffffffab;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2;
+            display: flex;
+            align-items: center
+            
+        }
+
+        header img {
+            padding: 5px;
+            margin-left: 10px;
+            width: 60px;
+        }
+
+        header h1 {
+            margin-top: -8px;
+            margin-left: 7px;
+            color: #5e17eb;
+        }
+
+        @font-face {
+            font-family: 'TexGyreAdventorRegular';
+            src: url('texgyreadventor-regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+         .poisk a {
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+            display: inline-block;
+            font-size: larger;
+            width: 210px;
+            background-color: #5e17eb;
+            border: 2px solid #5e17eb;
+            height: 50px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 50px;
+            margin-left: 20px;
+            line-height: 50px;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .poisk a:hover {
+            background-color: #7b2aff;
+            border-color: #7b2aff;
+        }
+
+        .poisk input {
+            width: 500px;
+            height: 50px;
+            outline: none;
+            border-radius: 10px;
+            border: 2px solid #5e17eb;
+            transition: border 0.3s;
+            font-size: larger;
+        }
+
+        .poisk input:focus {
+            border: 5px solid #7b2aff;
+        }
+
+
+        .content img {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 500px;
+            z-index: -1;
+        }
+
+        .content h1 {
+            font-size: 70px;
+        }
+
+        .poisk {
+            margin-left: 150px;
+            margin-top: 80px;
+        
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'TexGyreAdventor', sans-serif;
+        }
+
+        p {
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+        }
+
+    }
+    </style>
+        <style>
+        @media (min-width: 900px) {
+
+            .container {
+        display: flex;
+        align-items: center;
+        background-color: #f5faff;
+        border-radius: 10px;
+        padding: 30px;
+        width: 80%;
+        margin: auto;
+        margin-top: 100px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .left-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 20px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .logo {
+        background-color: #5e17eb;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .left-section p {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        
+    }
+    
+    .right-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input {
+        height: 40px;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid #7b2aff;
+        padding: 0 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        transition: border 0.3s;
+    }
+    
+    input:focus {
+                border: 4px solid #7b2aff;
+    }
+    
+    button {
+        height: 40px;
+        background-color: #5e17eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #7b2aff;
+    }
+    
+    .right-section p {
+        font-size: 12px;
+        color: #666;
+        margin-top: 10px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .right-section a {
+        color: #7b2aff;
+        text-decoration: none;
+    }
+    
+    .right-section a:hover {
+        text-decoration: underline;
+    }
+    
+    sub {
+        margin-left: 50px;
+        margin-bottom: -10px;
+        color: #5e17eb;
+    }
+
+    .section {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #ffffff00;
+            border: 1px solid rgba(0, 0, 0, 0.37);
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px;
+            width: 300px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: box-shadow 0.3s;
+            align-items: center;
+        }
+
+
+        .card:hover {
+            box-shadow: 0 0px 8px rgba(0, 0, 0, 0.326);
+        }
+
+        .img {
+            text-align: center;
+            
+        }
+
+        img {
+            width: 99%;
+            border-radius: 5px;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(64, 9, 132);
+            color: white;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: rgb(96, 5, 206);
+        }
+
+        .info-account {
+            padding: 3px;
+            background-color: rgb(255, 226, 183);
+            margin-top: 15px;
+            border-radius: 5px;
+            padding-bottom: 15px;
+            display: none;
+        }
+
+        .info-account p {
+            margin-left: 15px;
+            font-size: small;
+            color: #F19E39;
+        }
+
+        .info-account button {
+            height: 35px;
+            background-color: #F19E39;
+            width: 95%;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .work {
+            font-size: 70px;
+        }
+
+        .mail {
+            display: none;
+        }
+    
+    }
+        </style>
+</head>
+<body>
+    <header>
+        <img src="mg.png" alt="">
+        <h1><b>mega.kz</b></h1>
+        <h1 class="country" style="font-family: 'TexGyreAdventorRegular', sans-serif; margin-left: auto; padding-right: 20px;">◅ Казахстан</h1>
+    </header>
+    <br><br><br>
+    <div class="content">
+        <img src="фото.png" alt="">
+        <div class="poisk">
+        <h1>Найди товары и работу мечты</h1><br>
+        <input placeholder="Поиск..." type="text"><a href="">Найти</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <sub>.kz</sub>
+            <div class="logo">mg</div>
+            <p>Напишите адрес электронной почты, чтобы работодатели могли предложить вам работу <p style="color: #b3b3b3; font-size: 11px; font-family: 'TexGyreAdventorRegular', sans-serif;">а также чтобы мы вас сдали в фбр</p></p>
+        </div>
+        <div class="right-section">
+            <input type="email" placeholder="example@gmail.com"/>
+            <button>Продолжить</button>
+            <div class="info-account">
+                <p>Эта информация аккаунта верна? (мы ее нашли)</p>
+                <p>ФИО (предположительно): <u>Вадим К.</u></p>
+                <p>Ютуб канал: <u>@zerkach2585</u></p>
+                <p>Номер телефона: <u>*Undefined*</u></p>
+                <center>
+                <button>Все верно!</button>
+                </center>
+            </div>
+            <p>Нажимая «Продолжить», вы подтверждаете, что ознакомлены, полностью согласны и принимаете условия <a href="#">«Соглашения об оказании услуг по содействию в трудоустройстве (оферта)»</a></p>
+        </div>
+    </div>
+    <div class="mail">
+        <p>Напишите адрес электронной почты, чтобы работодатели могли предложить вам работу <p style="color: #b3b3b3; font-size: 11px; font-family: 'TexGyreAdventorRegular', sans-serif;">а также чтобы мы вас сдали в фбр</p></p>
+        <input type="email" placeholder="example@gmail.com"/>
+            <button>Продолжить</button>
+    </div>
+    <center>
+    <h2 class="work" style="padding-top: 20px; padding-bottom: 20px;">Для ищущих работу</h2>
+    </center>
+    <div class="section">
+
+        <div style="border-left: 10px solid #8b6fe8;" class="card">
+        <h2>Курьер</h2>
+        <p>100 000 - 890 000₸</p>
+        <p style="padding-top: 30px;">946 вакансий</p>
+        </div>
+
+        <div style="border-left: 10px solid #8b6fe8;" class="card">
+            <h2>Посыльный</h2>
+            <p>153 064 - 638 000₸</p>
+            <p style="padding-top: 30px;">184 вакансий</p>
+        </div>
+
+        <div style="border-left: 10px solid #8b6fe8;" class="card">
+            <h2>Разносчик</h2>
+            <p>937 793 - 1 493 579₸</p>
+            <p style="padding-top: 30px;">84 вакансий</p>
+        </div>
+
+        <div style="border-left: 10px solid #a58de6" class="card">
+            <h2>Закладчик</h2>
+            <p>26 836 468₸ - 8 лет тюрьмы</p>
+            <p style="padding-top: 30px;">2 вакансии</p>
+        </div>
+
+        <div style="border-left: 10px solid #a58de6" class="card">
+            <h2>Личный гонец</h2>
+            <p>0,0005 - 794 379₸</p>
+            <p style="padding-top: 30px;">8 вакансий</p>
+        </div>
+
+        <div style="border-left: 10px solid #a58de6" class="card">
+            <h2>Посланник</h2>
+            <p>100 000 000 - ∞₸</p>
+            <p style="padding-top: 30px;">16 вакансий</p>
+        </div>
+
+        <div style="border-left: 10px solid #c6bdf0;" class="card">
+            <h2>Перевозчик</h2>
+            <p>0 - 100₸</p>
+            <p style="padding-top: 30px;">3976 вакансий</p>
+        </div>
+        
+        <div style="border-left: 10px solid #c6bdf0;" class="card">
+            <h2>доставщик</h2>
+            <p>100 000 - 890 000₸</p>
+            <p style="padding-top: 30px;">174 вакансий</p>
+        </div>
+
+        <div style="border-left: 10px solid #c6bdf0;" class="card">
+            <h2>Служба доставки</h2>
+            <p>100 000 - 890 000₸</p>
+            <p style="padding-top: 30px;">5 вакансий</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#link1">Privacy Policy</a>
+            <a href="#link2">Terms of Service</a>
+            <a href="#link3">Help Center</a>
+        </div>
+        <div class="qr-code">
+            <img src="МЕГА.png" alt="QR Code to download mobile app">
+            <p style="margin-left: -10px;">Моб. приложение</p>
+        </div>
+    </footer>
+
+    <style>
+        @media (min-width: 900px) {
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #5e17eb;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #7b2aff;
+        }
+
+        .qr-code img {
+            width: 120px;
+            height: 120px;
+            margin-right: 50px;
+        }
+
+    }
+    </style>
+</body>
+</html>
+
+
+
+<!-- Тут у нас верстка -->
+
+<style>
+    @media (max-width: 900px) {
+
+        @font-face {
+            font-family: 'TexGyreAdventor';
+            src: url('texgyreadventor-bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TexGyreAdventorRegular';
+            src: url('texgyreadventor-regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'TexGyreAdventor', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'TexGyreAdventor', sans-serif;
+        }
+
+        p, a, button {
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+        }
+
+        body {
+            position: relative;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 72px;
+            background-color: #ffffffab;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2;
+            display: flex;
+            align-items: center
+            
+        }
+
+        header img {
+            padding: 5px;
+            margin-left: 10px;
+            width: 60px;
+        }
+
+        header h1 {
+            margin-top: -8px;
+            margin-left: 7px;
+            color: #5e17eb;
+        }
+
+        .content img {
+            position: absolute;
+            top: 280px;
+            left: 50%;
+            right: 50%;
+            filter: blur(10px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            z-index: -1;
+        }
+
+        .content h1 {
+            color: black;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+
+        .poisk a {
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+            display: inline-block;
+            font-size: larger;
+            width: 80%;
+            background-color: #7b2aff;
+            border: 2px solid #7b2aff;
+            height: 50px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            line-height: 50px;
+            margin-top: 10px;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .poisk a:hover {
+            background-color: #5e17eb;
+            border-color: #5e17eb;
+        }
+
+        .poisk input {
+            width: 80%;
+            height: 50px;
+            outline: none;
+            border-radius: 10px;
+            border: 2px solid #5e17eb;
+            transition: border 0.3s;
+            font-size: larger;
+        }
+
+        .poisk input:focus {
+            border: 5px solid #7b2aff;
+        }
+
+        .poisk {
+            text-align: center;
+        }
+
+        .container {
+        display: flex;
+        align-items: center;
+        background-color: #f5faff;
+        border-radius: 10px;
+        padding: 30px;
+        width: 80%;
+        margin: auto;
+        margin-top: 150px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .left-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 20px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .logo {
+        background-color: #5e17eb;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .left-section p {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        
+    }
+    
+    .right-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input {
+        height: 40px;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid #7b2aff;
+        padding: 0 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        transition: border 0.3s;
+    }
+    
+    input:focus {
+                border: 4px solid #7b2aff;
+    }
+    
+    button {
+        height: 40px;
+        background-color: #5e17eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #7b2aff;
+    }
+    
+    .right-section p {
+        font-size: 12px;
+        color: #666;
+        margin-top: 10px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .right-section a {
+        color: #7b2aff;
+        text-decoration: none;
+    }
+    
+    .right-section a:hover {
+        text-decoration: underline;
+    }
+    
+    sub {
+        margin-left: 50px;
+        margin-bottom: -10px;
+        color: #5e17eb;
+    }
+
+    .info-account {
+        display: none;
+    }
+
+    .section {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #ffffff00;
+            border: 1px solid rgba(0, 0, 0, 0.37);
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px;
+            width: 250px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: box-shadow 0.3s;
+            align-items: center;
+        }
+
+
+        .card:hover {
+            box-shadow: 0 0px 8px rgba(0, 0, 0, 0.326);
+        }
+
+        .img {
+            text-align: center;
+            
+        }
+
+        img {
+            width: 99%;
+            border-radius: 5px;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(64, 9, 132);
+            color: white;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: rgb(96, 5, 206);
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #5e17eb;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #7b2aff;
+        }
+
+        .qr-code img {
+            width: 120px;
+            height: 120px;
+            margin-right: 50px;
+        }
+
+        .country {
+            display: none;
+        }
+
+        .work {
+            font-size: 40px;
+        }
+
+        .mail {
+            display: none;
+        }
+    }
+</style>
+<style>
+    @media (max-width: 550px) {
+        @font-face {
+            font-family: 'TexGyreAdventor';
+            src: url('texgyreadventor-bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TexGyreAdventorRegular';
+            src: url('texgyreadventor-regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'TexGyreAdventor', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'TexGyreAdventor', sans-serif;
+        }
+
+        p, a, button {
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+        }
+
+        body {
+            position: relative;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 72px;
+            background-color: #ffffffab;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2;
+            display: flex;
+            align-items: center
+            
+        }
+
+        header img {
+            padding: 5px;
+            margin-left: 10px;
+            width: 60px;
+        }
+
+        header h1 {
+            margin-top: -8px;
+            margin-left: 7px;
+            color: #5e17eb;
+        }
+
+        .content img {
+            position: absolute;
+            top: 280px;
+            left: 50%;
+            right: 50%;
+            filter: blur(10px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            z-index: -1;
+        }
+
+        .content h1 {
+            color: black;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 30px;
+        }
+
+        .poisk a {
+            font-family: 'TexGyreAdventorRegular', sans-serif;
+            display: inline-block;
+            font-size: larger;
+            width: 80%;
+            background-color: #7b2aff;
+            border: 2px solid #7b2aff;
+            height: 50px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            line-height: 50px;
+            margin-top: 10px;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .poisk a:hover {
+            background-color: #5e17eb;
+            border-color: #5e17eb;
+        }
+
+        .poisk input {
+            width: 80%;
+            height: 50px;
+            outline: none;
+            border-radius: 10px;
+            border: 2px solid #5e17eb;
+            transition: border 0.3s;
+            font-size: larger;
+        }
+
+        .poisk input:focus {
+            border: 5px solid #7b2aff;
+        }
+
+        .poisk {
+            text-align: center;
+        }
+
+        .container {
+        align-items: center;
+        background-color: #f5faff;
+        border-radius: 10px;
+        padding: 30px;
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+        display: none;
+    }
+    
+    .left-section {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 20px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .logo {
+        background-color: #5e17eb;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    
+    .left-section p {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        
+    }
+
+    
+    input {
+        height: 40px;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid #7b2aff;
+        padding: 0 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        transition: border 0.3s;
+    }
+    
+    input:focus {
+                border: 4px solid #7b2aff;
+    }
+    
+    button {
+        height: 40px;
+        background-color: #5e17eb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #7b2aff;
+    }
+    
+    .right-section p {
+        font-size: 12px;
+        color: #666;
+        margin-top: 10px;
+        font-family: 'TexGyreAdventorRegular', sans-serif;
+    }
+    
+    .right-section a {
+        color: #7b2aff;
+        text-decoration: none;
+    }
+    
+    .right-section a:hover {
+        text-decoration: underline;
+    }
+    
+    sub {
+        margin-left: 50px;
+        margin-bottom: -10px;
+        color: #5e17eb;
+    }
+
+    .info-account {
+        display: none;
+    }
+
+    .section {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #ffffff00;
+            border: 1px solid rgba(0, 0, 0, 0.37);
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 5px;
+            width: 250px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: box-shadow 0.3s;
+            align-items: center;
+        }
+
+
+        .card:hover {
+            box-shadow: 0 0px 8px rgba(0, 0, 0, 0.326);
+        }
+
+        .img {
+            text-align: center;
+            
+        }
+
+        img {
+            width: 99%;
+            border-radius: 5px;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(64, 9, 132);
+            color: white;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: rgb(96, 5, 206);
+        }
+
+        footer {
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #5e17eb;
+            font-size: 14px;
+            transition: color 0.3s;
+            display: none;
+        }
+
+        .footer-links a:hover {
+            color: #7b2aff;
+        }
+
+        .qr-code img {
+            width: 120px;
+            height: 120px;
+            margin-right: 50px;
+        }
+
+        .qr-code p {
+            display: none;
+        }
+
+        .country {
+            display: none;
+        }
+
+        .work {
+            font-size: 40px;
+        }
+    }
+</style>
